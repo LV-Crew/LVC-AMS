@@ -1,32 +1,38 @@
 # LVC-AMS
 LV-Crew (LVC) Android Maintenance Scripts (AMS)
 
+<br>
 
-**THIS PROJECT IS "PRE-ALPHA" !!!**  
-**THE SCRIPTS DON'T FULLY WORK BY NOW !!!**  
-**THEY ARE ONLY INDENDED FOR DEVELOPERS WHO WANT TO JOIN IN !!!**
+**_THIS_ _PROJECT_ _IS_ _"PRE-ALPHA"_ _!!!_**  
+**_THE_ _SCRIPTS_ _DON'T_ _FULLY_ _WORK_ _BY_ _NOW_ _!!!_**  
+**_THEY_ _ARE_ _ONLY_ _INTENDED_ _FOR_ _DEVELOPERS_ _WHO_ _WANT_ _TO_ _JOIN_ _IN_ _!!!_**
 
+<br>
 
 **Let's call it "BleachBit for Android"! ;-)**  
 (This project isn't officially connected with BleachBit!)  
 (Get BleachBit: [https://www.bleachbit.org/](https://www.bleachbit.org/))
 
+<br>
 
-**"Till now there existed no cleaner that can clean up my whole phone!"  
+**"Till now there existed no cleaner that can clean up my whole phone!"**  
 (Tobias B. Besemer)
 
+<br>
+
 ## Main benefits (Highlights)
-The main benefits (Highlights) are:
+The main benefits (highlights) are:
 - The only cleaner where you can follow what he is exactly doing (because it is a script)!
 - No own code with bugs - just Linux standard commands!
-- The only cleaner for cookies on Android and that for a lot of apps!
+- The only cleaner for Cookies on Android and that for a lot of apps!
 - Easy to participate (because it is a script)!
 - Possibility to get the best cleaner for Android (because easy to participate)!
 - Special script to restore privacy!
 
+<br>
 
 ## tl;dr
-Short explanaition on how to use it:
+Short explanation on how to use it:
 - Make sure you be "root", or "root" your device.
 - Copy the folder LVC-AMS into the "root folder" of the "partition" you want to maintenance.
 - If you want to maintenance e.g. "system" and "SDCard", you need one copy for each "partition".
@@ -37,9 +43,10 @@ Short explanaition on how to use it:
 - If you have concerns about your privacy, you can instead execute "LVC-AMS_-_Run_privacy.sh" that deletes a bit more.
 - That's it!
 
+<br>
 
-## Long explanaition on how to use it
-The long explanaition on how to use it:
+## Long explanation on how to use it
+The long explanation on how to use it:
 - Make sure you be "root", or "root" your device.
 - Copy the folder LVC-AMS into the "root folder" of the "partition" you want to maintenance.
 - If you want to maintenance e.g. "system" and "SDCard", you need one copy for each "partition".
@@ -52,6 +59,7 @@ The long explanaition on how to use it:
 - If you want to execute just one task, maybe edit the variables in the script, the run it.
 - That's it!
 
+<br>
 
 ## TO-DOS
 TO-DOS-List:
@@ -59,8 +67,9 @@ TO-DOS-List:
 - And all the rest ^^
 - GUI App to manage and execute the scripts
 
+<br>
 
 ## Questions & Answers
 **Why are the paths relative?**
-- So you can also use the scrips e.g. on an external SD card that is ejected (and e.g. connected to your Linux Desktop).
-- You can also "clean up" some old backup archives.
+* So you can also use the scrips e.g. on an external SD card that is ejected (and e.g. connected to your Linux Desktop).
+* You can also "clean up" some old backup archives.
