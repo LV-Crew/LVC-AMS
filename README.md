@@ -71,5 +71,5 @@ TO-DOS-List:
 
 ## Questions & Answers
 **Why are the paths relative?**
-* So you can also use the scrips e.g. on an external SD card that is ejected (and e.g. connected to your Linux Desktop).
-* You can also "clean up" some old backup archives.
+- So you can also use the scrips e.g. on an external SD card that is ejected (and e.g. connected to your Linux Desktop).
+- You can also "clean up" some old backup archives.
