@@ -20,7 +20,7 @@
 # File           : LVC-AMS_-_Secure_Wipe.sh
 # Author         : Tobias B. Besemer
 # Author URL     : https://github.com/Tobias-B-Besemer
-# Version of file: 2019-07-18.01
+# Version of file: 2019-07-18.02
 
 # Device to secure wipe:
 LVC_AMS_SW_Device=sda
@@ -40,12 +40,12 @@ hdparm -I /dev/$LVC_AMS_SW_Device
 echo -n mem > /sys/power/state
 
 # We use "LVC-AMS" as a temporary password!
-hdparm --user-master u --security-set-pass LVC-AMS /dev/X
+hdparm --user-master u --security-set-pass LVC-AMS /dev/$LVC_AMS_SW_Device
 
-hdparm -I /dev/X
+hdparm -I /dev/$LVC_AMS_SW_Device
 
-time hdparm --user-master u --security-erase LVC-AMS /dev/X
+time hdparm --user-master u --security-erase LVC-AMS /dev/$LVC_AMS_SW_Device
 
-hdparm -I /dev/X
+hdparm -I /dev/$LVC_AMS_SW_Device
 
 # EOF
