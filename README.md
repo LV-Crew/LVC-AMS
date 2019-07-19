@@ -57,6 +57,12 @@ The long explanation on how to use it:
 - Execute "LVC-AMS_-_Run_all.sh" to run all tasks.
 - If you have concerns about your privacy, you can instead execute "LVC-AMS_-_Run_privacy.sh" that deletes a bit more.
 - If you want to execute just one task, maybe edit the variables in the script, the run it.
+- If you like, you can create with "LVC-AMS_-_Create_cron_all.sh" a cron for "LVC-AMS_-_Run_all.sh". You can edit the variables in this script before, too.
+- If you like, you can create with "LVC-AMS_-_Create_cron_privacy.sh" a cron for "LVC-AMS_-_Run_privacy.sh". You can edit the variables in this script before, too.
+- If you like, you can support us with running "LVC-AMS_-_Log_scan_files.sh" and upload the created TXT file as an issue. This script will scan for special file names.
+- If you like, you can support us with running "LVC-AMS_-_Log_scan_dirs.sh" and upload the created TXT file as an issue. This script will scan for special directory names.
+- If you like, you can support us with running "LVC-AMS_-_Log_dir_structure.sh" and upload the created TXT file as an issue. This script will log your directory structure.
+- If you reinstall your phone or move you extended SDCard (data) to a new one, you can run "LVC-AMS_-_Delete_App2SD_folders.sh" on it, if you have used (a) App2SD(+) (app).
 - That's it!
 
 <br>
@@ -64,7 +70,12 @@ The long explanation on how to use it:
 ## TO-DOS
 TO-DOS-List:
 - Add some echos
+- Delete OBB files from extSD after new install
+- [https://www.android-hilfe.de/forum/android-allgemein.20/handy-aufraeumen-android-ordner-tabu.619409.html](https://www.android-hilfe.de/forum/android-allgemein.20/handy-aufraeumen-android-ordner-tabu.619409.html)
+- [https://www.androidpit.de/forum/448782/cache-im-android-ordner-loeschen](https://www.androidpit.de/forum/448782/cache-im-android-ordner-loeschen)
+- Use alternative paths from: [https://github.com/d4rken/sdmaid-public/issues/674](https://github.com/d4rken/sdmaid-public/issues/674)
 - And all the rest ^^
+- SH, or CLI "LVC-AMS_-_Merge_system_APKs_updates"
 - GUI App to manage and execute the scripts
 
 <br>
@@ -73,3 +84,6 @@ TO-DOS-List:
 **Why are the paths relative?**
 - So you can also use the scrips e.g. on an external SD card that is ejected (and e.g. connected to your Linux Desktop).
 - You can also "clean up" some old backup archives.
+
+**Why are some file names have small letters?**
+Normal Cleaners and Tasks use big letters - batch jobs and special scripts have small letters.

@@ -20,7 +20,7 @@
 # File           : LVC-AMS_-_Delete_Caches.sh
 # Author         : Tobias B. Besemer
 # Author URL     : https://github.com/Tobias-B-Besemer
-# Version of file: 2019-07-18.01
+# Version of file: 2019-07-19.01
 
 echo
 echo "Delete Caches..."
@@ -43,6 +43,7 @@ rm -rfv Android/data/*/cache/.
 
 rm -rfv data/data/com.anddoes.launcher/files/umeng_it.cache
 #rm -rfv data/data/com.dropbox.android/app_DropboxSyncCache/*/*-account/account_photo_cache/.
+# First "*" is in my case "a crypted user ID".
 # Need more analysis !!!
 #rm -rfv data/data/com.facebook.katana/app_appcache/.
 # Need more analysis !!!
@@ -76,16 +77,24 @@ echo "Delete Temp folders..."
 rm -rfv data/data/ch.threema.app/files/tmp/.
 rm -rfv data/data/com.biglybt.android.client/files/.biglybt/tmp/.
 rm -rfv data/data/com.dropbox.android/app_DropboxSyncCache/*/Temp/.
+# "*" is in my case "a crypted user ID".
 rm -rfv data/data/com.dropbox.android/cache/u*/tmp/.
+# "*" is in my case "a 8 digit user ID".
 rm -rfv data/data/com.dropbox.android/files/anl/tmp/.
 rm -rfv data/data/com.dropbox.android/global/sharedlinks/tmp/.
 rm -rfv data/data/com.facebook.katana/app_compactdisk/cc_ard_always_unzip_tmp/.
 rm -rfv data/data/com.facebook.katana/app_compactdisk/filesimage/*/sessionless/tmp/.
+# 
 rm -rfv data/data/com.facebook.katana/app_compactdisk/graph_service_cache/*/*/tmp/.
+# 
 rm -rfv data/data/com.facebook.katana/app_compactdisk/mixed_cache__cold_effect_asset_disk_cache.*/tmp/.
+# 
 rm -rfv data/data/com.facebook.katana/app_compactdisk/mixed_cache__hot_effect_asset_disk_cache.*/tmp/.
+# 
 rm -rfv data/data/com.facebook.katana/app_compactdisk/msqrd_effect_asset_disk_cache_fixed.*/tmp/.
+# 
 rm -rfv data/data/com.facebook.katana/app_compactdisk/msqrd_effect_asset_disk_cache_fixed_sessionless/*/sessionless/tmp/.
+# 
 rm -rfv data/data/com.facebook.katana/app_fb-forker-tmp/.
 rm -rfv data/data/com.facebook.katana/app_upload_crash_monitor_temp/.
 
