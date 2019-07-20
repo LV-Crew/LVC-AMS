@@ -17,24 +17,25 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-# File           : LVC-AMS_-_Delete_Junk_Files.sh
+# File           : LVC-AMS_-_Backup_make.sh
 # Author         : Tobias B. Besemer
 # Author URL     : https://github.com/Tobias-B-Besemer
-# Version of file: 2019-07-19.01
+# Version of file: 2019-07-20.01
+# Notes          : This script have no function, yet!
 
 echo
-echo "Delete Junk Files..."
+echo "Lets make a backup..."
 echo
 su
 
-cd ..
 
-rm -rfv stack_trace_*.txt
+echo "This script have no function, yet!"
 
-cd LVC-AMS
+if false; then
 
-if run single
-	LVC-AMS_-_End_clean_options.sh
-endif
+# Here will follow some notes and coding snippets...
+
+fi
+
 
 # EOF

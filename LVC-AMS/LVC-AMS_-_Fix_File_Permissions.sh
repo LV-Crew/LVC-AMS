@@ -20,13 +20,35 @@
 # File           : LVC-AMS_-_Fix_File_Permissions.sh
 # Author         : Tobias B. Besemer
 # Author URL     : https://github.com/Tobias-B-Besemer
-# Version of file: 2019-07-18.01
+# Version of file: 2019-07-20.01
+# Notes          : Script isn't tested, yet!
 
 echo
 echo "Fix File Permissions..."
 echo
+su
+
+if false; then
+
+# Here will follow some notes and coding snippets...
 
 # https://forum.xda-developers.com/showthread.php?t=2222297
+
+chown -R media_rw:media_rw /data/media/
+find /data/media/ -type d -exec chmod 775 {} ';'
+find /data/media/ -type f -exec chmod 664 {} ';'
+
+restorecon -FR /data/media/
+
+fi
+
+
+echo
+echo "Script isn't tested, yet!"
+echo
+read -p "Press [Enter] key to continue, or maybe better 'Ctrl + C' to abort... ;-)"
+echo
+
 
 # Code used from:
 # https://forum.xda-developers.com/showthread.php?t=2239421

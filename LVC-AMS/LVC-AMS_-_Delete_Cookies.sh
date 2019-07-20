@@ -20,7 +20,8 @@
 # File           : LVC-AMS_-_Delete_Cookies.sh
 # Author         : Tobias B. Besemer
 # Author URL     : https://github.com/Tobias-B-Besemer
-# Version of file: 2019-07-18.01
+# Version of file: 2019-07-20.01
+# Notes          : Script isn't tested, yet!
 
 echo
 echo "Delete Cookies..."
@@ -28,6 +29,14 @@ echo
 su
 
 cd ..
+
+
+echo
+echo "Script isn't tested, yet!"
+echo
+read -p "Press [Enter] key to continue, or maybe better 'Ctrl + C' to abort... ;-)"
+echo
+
 
 rm -rfv data/data/com.amazon.mShop.android.ahopping/app_webview/Cookies
 rm -rfv data/data/com.amazon.mShop.android.ahopping/app_webview/Cookies-journal
@@ -62,5 +71,17 @@ rm -rfv data/data/com.facebook.katana/app_webview/Cookies
 rm -rfv data/data/com.facebook.katana/app_webview/Cookies-journal
 
 cd LVC-AMS
+
+
+if false; then
+
+# Here will follow some notes and coding snippets...
+
+if run single
+  /bin/bash LVC-AMS_-_End_clean_options.sh
+endif
+
+fi
+
 
 # EOF

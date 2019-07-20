@@ -20,7 +20,7 @@
 # File           : LVC-AMS_-_Delete_Dalvik_Cache.sh
 # Author         : Tobias B. Besemer
 # Author URL     : https://github.com/Tobias-B-Besemer
-# Version of file: 2019-07-18.01
+# Version of file: 2019-07-19.01
 
 echo
 echo "Delete Dalvik Cache..."
@@ -38,12 +38,40 @@ rm -rfv dalvik-cache/.
 # https://forum.xda-developers.com/google-nexus-5/help/how-to-wipe-art-cache-t2641077
 
 echo
-read -p "Press [Enter] key to reboot, or Ctrl+C to abort..."
+echo "Reboot now?"
 echo
-echo "We reboot now..."
+echo "Option 1: Reboot now"
+echo "Option 2: Reboot later"
+echo "Exit Script"
 echo
-reboot
+PS3='Please enter your choice: '
+Options=("Option 1" "Option 2" "Exit Script")
+select opt in "${Options[@]}"
+do
+  case $opt in
+    "Option 1")
+      echo
+      echo "We reboot now..."
+      echo
+      reboot
+      ;;
+    "Option 2")
+      break
+      ;;
+    "Exit Script")
+      # https://www-numi.fnal.gov/offline_software/srt_public_context/WebDocs/Errors/unix_system_errors.html
+      # https://mariadb.com/kb/en/library/operating-system-error-codes/
+      # http://tldp.org/LDP/abs/html/exitcodes.html
+      exit 1
+      ;;
+    *) echo "Invalid option $REPLY!";;
+  esac
+done
 
 cd LVC-AMS
+
+if run single
+	LVC-AMS_-_End_clean_options.sh
+endif
 
 # EOF

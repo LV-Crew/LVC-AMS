@@ -20,7 +20,7 @@
 # File           : LVC-AMS_-_Secure_Wipe.sh
 # Author         : Tobias B. Besemer
 # Author URL     : https://github.com/Tobias-B-Besemer
-# Version of file: 2019-07-18.02
+# Version of file: 2019-07-19.01
 
 # Device to secure wipe:
 LVC_AMS_SW_Device=sda
@@ -47,5 +47,9 @@ hdparm -I /dev/$LVC_AMS_SW_Device
 time hdparm --user-master u --security-erase LVC-AMS /dev/$LVC_AMS_SW_Device
 
 hdparm -I /dev/$LVC_AMS_SW_Device
+
+if run single
+	LVC-AMS_-_End_clean_options.sh
+endif
 
 # EOF

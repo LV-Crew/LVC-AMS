@@ -20,7 +20,9 @@
 # File           : LVC-AMS_-_Delete_Caches.sh
 # Author         : Tobias B. Besemer
 # Author URL     : https://github.com/Tobias-B-Besemer
-# Version of file: 2019-07-19.01
+# Version of file: 2019-07-20.01
+# Notes          : Script isn't tested, yet!
+#                  Code have some TO-DOS!
 
 echo
 echo "Delete Caches..."
@@ -29,11 +31,21 @@ su
 
 cd ..
 
+
+echo
+echo "Script isn't tested, yet!"
+echo
+read -p "Press [Enter] key to continue, or maybe better 'Ctrl + C' to abort... ;-)"
+echo
+
+
 # https://forums.oneplus.com/threads/caches-explained.828298/
 
 # https://www.androidauthority.com/phone-storage-folders-explained-744100/
 #rm -rfv cache/.
+# Include a 'lost+found' folder!
 #rm -rfv data/cache/.
+# Include a 'lost+found' folder!
 # Need more analysis !!!
 
 # https://android.stackexchange.com/questions/47924/where-android-apps-store-data/47951
@@ -72,7 +84,9 @@ rm -rfv Android/data/com.amazon.kindle/files/cache/.
 rm -rfv Android/data/com.sand.airdroid/files/cache/.
 rm -rfv InstaSave/is_cache/.
 
+echo
 echo "Delete Temp folders..."
+echo
 
 rm -rfv data/data/ch.threema.app/files/tmp/.
 rm -rfv data/data/com.biglybt.android.client/files/.biglybt/tmp/.
@@ -84,17 +98,23 @@ rm -rfv data/data/com.dropbox.android/files/anl/tmp/.
 rm -rfv data/data/com.dropbox.android/global/sharedlinks/tmp/.
 rm -rfv data/data/com.facebook.katana/app_compactdisk/cc_ard_always_unzip_tmp/.
 rm -rfv data/data/com.facebook.katana/app_compactdisk/filesimage/*/sessionless/tmp/.
-# 
+# TO-DOS
+# "*" is in my case "*follow*".
 rm -rfv data/data/com.facebook.katana/app_compactdisk/graph_service_cache/*/*/tmp/.
-# 
+# TO-DOS
+# "*" is in my case "*follow*".
 rm -rfv data/data/com.facebook.katana/app_compactdisk/mixed_cache__cold_effect_asset_disk_cache.*/tmp/.
-# 
+# TO-DOS
+# "*" is in my case "*follow*".
 rm -rfv data/data/com.facebook.katana/app_compactdisk/mixed_cache__hot_effect_asset_disk_cache.*/tmp/.
-# 
+# TO-DOS
+# "*" is in my case "*follow*".
 rm -rfv data/data/com.facebook.katana/app_compactdisk/msqrd_effect_asset_disk_cache_fixed.*/tmp/.
-# 
+# TO-DOS
+# "*" is in my case "*follow*".
 rm -rfv data/data/com.facebook.katana/app_compactdisk/msqrd_effect_asset_disk_cache_fixed_sessionless/*/sessionless/tmp/.
-# 
+# TO-DOS
+# "*" is in my case "*follow*".
 rm -rfv data/data/com.facebook.katana/app_fb-forker-tmp/.
 rm -rfv data/data/com.facebook.katana/app_upload_crash_monitor_temp/.
 
@@ -107,5 +127,17 @@ rm -rfv com.facebook.orca/fb_temp/.
 rm -rfv FStopMediaGallery/temp/.
 
 cd LVC-AMS
+
+
+if false; then
+
+# Here will follow some notes and coding snippets...
+
+if run single
+  /bin/bash LVC-AMS_-_End_clean_options.sh
+endif
+
+fi
+
 
 # EOF

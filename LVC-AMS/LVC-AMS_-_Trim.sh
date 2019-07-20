@@ -20,7 +20,7 @@
 # File           : LVC-AMS_-_Trim.sh
 # Author         : Tobias B. Besemer
 # Author URL     : https://github.com/Tobias-B-Besemer
-# Version of file: 2019-07-18.01
+# Version of file: 2019-07-19.01
 
 # Use as "Mountpoint":
 # - A path like /sdcard;
@@ -42,5 +42,9 @@ cd ..
 fstrim -v $LVC_AMS_Trim_Mountpoint
 
 cd LVC-AMS
+
+if run single
+	LVC-AMS_-_End_clean_options.sh
+endif
 
 # EOF

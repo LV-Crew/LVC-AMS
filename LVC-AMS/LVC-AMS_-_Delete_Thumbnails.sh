@@ -20,7 +20,7 @@
 # File           : LVC-AMS_-_Delete_Thumbnails.sh
 # Author         : Tobias B. Besemer
 # Author URL     : https://github.com/Tobias-B-Besemer
-# Version of file: 2019-07-18.01
+# Version of file: 2019-07-19.01
 
 echo
 echo "Delete Thumbnails..."
@@ -47,5 +47,9 @@ rm -rfv Android/data/com.android.providers.media/albumthumbs/.
 rm -rfv WhatsApp/.Thumbs/.
 
 cd LVC-AMS
+
+if run single
+	LVC-AMS_-_End_clean_options.sh
+endif
 
 # EOF

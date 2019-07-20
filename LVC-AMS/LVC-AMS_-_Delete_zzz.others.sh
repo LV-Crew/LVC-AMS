@@ -20,7 +20,7 @@
 # File           : LVC-AMS_-_Delete_zzz.others.sh
 # Author         : Tobias B. Besemer
 # Author URL     : https://github.com/Tobias-B-Besemer
-# Version of file: 2019-07-18.01
+# Version of file: 2019-07-19.01
 
 echo
 echo "Delete zzz.others..."
@@ -85,5 +85,9 @@ rm -rfv data/data/com.evozi.network/databases/google_app_measurement_local.db-jo
 rm -rfv Android/data/org.telegram.messenger.beta/files/logs/.
 
 cd LVC-AMS
+
+if run single
+	LVC-AMS_-_End_clean_options.sh
+endif
 
 # EOF

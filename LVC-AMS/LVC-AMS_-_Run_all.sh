@@ -20,7 +20,8 @@
 # File           : LVC-AMS_-_Run_all.sh
 # Author         : Tobias B. Besemer
 # Author URL     : https://github.com/Tobias-B-Besemer
-# Version of file: 2019-07-18.01
+# Version of file: 2019-07-20.01
+# Notes          : Script isn't tested, yet!
 
 echo
 echo "Run LV-Crew Android Maintenance Scripts..."
@@ -42,6 +43,15 @@ sleep 3
 /bin/bash LVC-AMS_-_Delete_Cookies.sh
 sleep 3
 
+/bin/bash LVC-AMS_-_Delete_Fabric.sh
+sleep 3
+
+/bin/bash LVC-AMS_-_Delete_old_apps.sh
+sleep 3
+
+/bin/bash LVC-AMS_-_Delete_zzz.others.sh
+sleep 3
+
 /bin/bash LVC-AMS_-_Delete_Junk_Files.sh
 sleep 3
 
@@ -57,11 +67,47 @@ sleep 3
 /bin/bash LVC-AMS_-_Trim.sh
 sleep 3
 
+/bin/bash LVC-AMS_-_Log_scan_files.sh
+sleep 3
+
+/bin/bash LVC-AMS_-_Log_scan_dirs.sh
+sleep 3
+
+/bin/bash LVC-AMS_-_Log_dir_structure.sh
+sleep 3
+
+/bin/bash LVC-AMS_-_End_clean_options.sh
+sleep 3
+
 echo
-read -p "Press [Enter] key to reboot, or Ctrl+C to abort..."
+echo "Reboot now?"
 echo
-echo "We reboot now..."
+echo "Option 1: Reboot now"
+echo "Option 2: Reboot later"
+echo "Exit Script"
 echo
-reboot
+PS3='Please enter your choice: '
+Options=("Option 1" "Option 2" "Exit Script")
+select opt in "${Options[@]}"
+do
+  case $opt in
+    "Option 1")
+      echo
+      echo "We reboot now..."
+      echo
+      reboot
+      ;;
+    "Option 2")
+      break
+      ;;
+    "Exit Script")
+      # https://www-numi.fnal.gov/offline_software/srt_public_context/WebDocs/Errors/unix_system_errors.html
+      # https://mariadb.com/kb/en/library/operating-system-error-codes/
+      # http://tldp.org/LDP/abs/html/exitcodes.html
+      exit 1
+      ;;
+    *) echo "Invalid option $REPLY!";;
+  esac
+done
 
 # EOF

@@ -17,19 +17,26 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-# File           : LVC-AMS_-_Delete_Junk_Files.sh
+# File           : LVC-AMS_-_Delete_zzz.Fabric.sh
 # Author         : Tobias B. Besemer
 # Author URL     : https://github.com/Tobias-B-Besemer
 # Version of file: 2019-07-19.01
 
 echo
-echo "Delete Junk Files..."
+echo "Delete zzz.Fabric..."
 echo
 su
 
 cd ..
 
-rm -rfv stack_trace_*.txt
+rm -rfv data/data/com.adobe.psmobile/files/.Fabric/.
+rm -rfv data/data/com.anddoes.launcher/files/.Fabric/.
+rm -rfv data/data/com.atomicadd.fotos/files/.Fabric/.
+rm -rfv data/data/com.coinbase.android/files/.Fabric/.
+rm -rfv data/data/com.degoo.android/files/.Fabric/.
+rm -rfv data/data/com.degoo.android/files/databases/FabricEvents/.
+rm -rfv data/data/com.discord/files/.Fabric/.
+rm -rfv data/data/com.evozi.network/files/.Fabric/.
 
 cd LVC-AMS
 
