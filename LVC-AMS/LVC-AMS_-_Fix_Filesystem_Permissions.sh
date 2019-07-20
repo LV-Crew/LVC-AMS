@@ -17,14 +17,14 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-# File           : LVC-AMS_-_Fix_File_Permissions.sh
+# File           : LVC-AMS_-_Fix_Filesystem_Permissions.sh
 # Author         : Tobias B. Besemer
 # Author URL     : https://github.com/Tobias-B-Besemer
-# Version of file: 2019-07-20.01
+# Version of file: 2019-07-20.02
 # Notes          : Script isn't tested, yet!
 
 echo
-echo "Fix File Permissions..."
+echo "Fix Filesystem Permissions..."
 echo
 su
 
@@ -38,6 +38,7 @@ chown -R media_rw:media_rw /data/media/
 find /data/media/ -type d -exec chmod 775 {} ';'
 find /data/media/ -type f -exec chmod 664 {} ';'
 
+# https://www.computerhope.com/jargon/s/selinux.htm
 restorecon -FR /data/media/
 
 fi

@@ -20,7 +20,7 @@
 # File           : LVC-AMS_-_Delete_Caches.sh
 # Author         : Tobias B. Besemer
 # Author URL     : https://github.com/Tobias-B-Besemer
-# Version of file: 2019-07-20.01
+# Version of file: 2019-07-20.02
 # Notes          : Script isn't tested, yet!
 #                  Code have some TO-DOS!
 
@@ -35,18 +35,38 @@ cd ..
 echo
 echo "Script isn't tested, yet!"
 echo
-read -p "Press [Enter] key to continue, or maybe better 'Ctrl + C' to abort... ;-)"
 echo
-
+echo "Option 1: Continue"
+echo "Option 2: Abort, because it's maybe better because it's maybe erroneous"
+echo
+echo "Exit Script"
+echo
+echo
+PS3='Please enter your choice: '
+Options=("Option 1" "Option 2" "Exit Script")
+select opt in "${Options[@]}"
+do
+  case $opt in
+    "Option 1")
+      
 
 # https://forums.oneplus.com/threads/caches-explained.828298/
 
 # https://www.androidauthority.com/phone-storage-folders-explained-744100/
+
+# Delete content in "data/cache/":
+# Can include a 'lost+found' folder!
+https://www.cyberciti.biz/faq/mv-command-howto-move-folder-in-linux-terminal/
+mv -v -b cache/lost+found /
 #rm -rfv cache/.
-# Include a 'lost+found' folder!
+# Needs anyway more analysis & clarification!
+
+# Delete content in "cache/":
+# Can include a 'lost+found' folder!
+https://www.cyberciti.biz/faq/mv-command-howto-move-folder-in-linux-terminal/
+mv -v -b data/cache/lost+found /
 #rm -rfv data/cache/.
-# Include a 'lost+found' folder!
-# Need more analysis !!!
+# Needs anyway more analysis & clarification!
 
 # https://android.stackexchange.com/questions/47924/where-android-apps-store-data/47951
 rm -rfv data/data/*/cache/.
@@ -138,6 +158,21 @@ if run single
 endif
 
 fi
+
+      
+      ;;
+    "Option 2")
+      break
+      ;;
+    "Exit Script")
+      # https://www-numi.fnal.gov/offline_software/srt_public_context/WebDocs/Errors/unix_system_errors.html
+      # https://mariadb.com/kb/en/library/operating-system-error-codes/
+      # http://tldp.org/LDP/abs/html/exitcodes.html
+      exit 1
+      ;;
+    *) echo "Invalid option $REPLY!";;
+  esac
+done
 
 
 # EOF

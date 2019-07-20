@@ -49,6 +49,7 @@ else
 delete /Dalvik
 
 # https://www.droidwiki.org/wiki/APK_Expansion_Files
+# Delete OBB files from extSD after new install
 delete /OBB
 delete /Android/OBB
 

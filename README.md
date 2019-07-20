@@ -33,11 +33,24 @@ LV-Crew (LVC) Android Maintenance Scripts (AMS)
 ## Main benefits (Highlights)
 The main benefits (highlights) are:
 - The only cleaner where you can follow what he is exactly doing (because it is a script)!
-- No own code with bugs - just Linux standard commands!
-- The only cleaner for Cookies on Android and that for a lot of apps!
 - Easy to participate (because it is a script)!
-- Possibility to get the best cleaner for Android (because easy to participate)!
+- No own code with bugs - just Linux standard commands!
+- The only cleaner for Cookies on Android and that for a lot of apps (or all, if you scan for the files)! **(Not stable, yet!)**
+- Can delete old apps (and there data)! **(Not implemented, yet!)**
+- Can delete the content of the Temp folders by a lot of apps! **(Not stable, yet!)**
+- Can delete remains of old apps, if you e.g. move your data to a new device! **(Not implemented, yet!)**
+- Can delete a lot of (pre-installed) system apps (bloatware)! **(Not implemented, yet!)**
+- Can help you to save a lot of disk space by e.g. deleting Caches! **(Not stable, yet!)**
+- Can make a simple "data only" backup of the system partition! **(Not implemented, yet!)**
+- Can check your partitions and fix file & folder permissions! **(Not stable, yet!)**
+- Can delete the Thumbnails of a lot of apps to restore your privacy! **(Not stable, yet!)**
+- Can delete Analytics of a lot of apps (or all, if you scan for the files) to restore your privacy! **(Not stable, yet!)**
 - Special script to restore privacy!
+- Can delete Fabric of a lot of apps (or all, if you scan for the files) to give you peace! **(Not stable, yet!)**
+- Can make a simple secure wipe of your free space! **(Not stable, yet!)**
+- Can Trim your system & data partions! **(Not stable, yet!)**
+- Can create Logs that the developers and improve the scripts! **(Not implemented, yet!)**
+- Possibility to get the best cleaner for Android (because easy to participate)!
 
 <br>
 
@@ -48,7 +61,7 @@ Short explanation on how to use it:
   or "check out" the latest version with your favorite Git Tool, or download the
   single files directly from the [Repo](https://github.com/LV-Crew/LVC-AMS/tree/master/LVC-AMS).
 - Copy the (extracted) folder LVC-AMS into the "root folder" of the "partition" you want to maintenance. (E.g. "/", "/sdcard", "/data/media/0", "/data/sdext2", "/storage/<UUID>", "/mnt/media_rw", or how ever it is called on your device...)
-- If you want to maintenance e.g. "system" and "SDCard", you need one copy for each "partition".
+- If you want to maintenance e.g. "system" and "SDcard", you need one copy for each "partition".
 - Install a (good) Terminal Emulator (e.g. Termux from: [https://play.google.com/store/apps/details?id=com.termux](https://play.google.com/store/apps/details?id=com.termux)).
 - Install maybe a keyboard that support "Ctrl + C" to abort the scrips at any point (e.g. Hacker's Keyboard from: [https://play.google.com/store/apps/details?id=org.pocketworkstation.pckeyboard](https://play.google.com/store/apps/details?id=org.pocketworkstation.pckeyboard)).
 - Open the terminal and navigate with e.g. "cd /LVC-AMS" into the LVC-AMS folder. (Consider you maybe have with different paths to your extSD different system rights!)
@@ -85,34 +98,43 @@ The long explanation on how to use it:
 
 <br>
 
+## XDA Thread
+**_Follows!_**
+
+<br>
+
 ## About the source code
 Here are some documentation if you want to read the source code or want to participate in it:  
 "Shell Scripting Tutorial" by Steve Parker: [https://www.shellscript.sh/](https://www.shellscript.sh/)  
 GNU "Bash Reference Manual": [https://www.gnu.org/software/bash/manual/bash.html](https://www.gnu.org/software/bash/manual/bash.html)  
 The Linux Documentation Project (LDP) "Advanced Bash-Scripting Guide": [http://www.tldp.org/LDP/abs/html/index.html](http://www.tldp.org/LDP/abs/html/index.html)  
 
+If you want to participate:  
+We use shell scripts (bash) as long it's possible and justifiable!  
+Use a corresponding filename and ".sh" as file extension!  
+Copy a header of an existing file, if you create a new one for the project!  
+If you need to create a new header: Don't forget to mention GNU3 in the header! ;-)  
+Follow the standards in the file you work on! (Better: Update the file to the project standards and make a single commit for it.)  
+And remember: "# The code is documentation enough!" -> Keep it this way! No documentation, but make good comments in code!  
+And, please add a "# EOF" at the end of each script file you create, too. ;-) Thanks!  
+Use a good coding editor like [Notepad++](https://notepad-plus-plus.org/) for Windows!
+
 If you want to participate, please follow these Style Guides:  
 Google "Shell Style Guide": [https://google.github.io/styleguide/shell.xml](https://google.github.io/styleguide/shell.xml)  
 "Bash Style Guide and Coding Standard" by Fritz Mehner, Fachhochschule Südwestfalen, Iserlohn: [https://lug.fh-swf.de/vim/vim-bash/StyleGuideShell.en.pdf](https://lug.fh-swf.de/vim/vim-bash/StyleGuideShell.en.pdf)  
 "Bash Style Guide and Coding Standard" is "With complementing comments on the testing of scripts".  
 
-Also:  
-Use a corresponding filename and ".sh" as file extension!  
-Copy a header of an existing file, if you create a new one for the project!  
-If you need to create a new header: Don't forget to mention GNU3 in the header! ;-)  
-Follow the standards in the file you work on! (Better: Update the file to the project standards and make a single commit for it.)  
-And, please add a "# EOF" at the end of each script file you create, too.  
-
 <br>
 
 ## TO-DOS
 TO-DOS-List:
-- Add some echos
-- Delete OBB files from extSD after new install
+- Add some echos here and there ;-)
 - [https://www.android-hilfe.de/forum/android-allgemein.20/handy-aufraeumen-android-ordner-tabu.619409.html](https://www.android-hilfe.de/forum/android-allgemein.20/handy-aufraeumen-android-ordner-tabu.619409.html)
 - [https://www.androidpit.de/forum/448782/cache-im-android-ordner-loeschen](https://www.androidpit.de/forum/448782/cache-im-android-ordner-loeschen)
+- Add command line parameters to the scripts were it's posible
 - Use alternative paths from: [https://github.com/d4rken/sdmaid-public/issues/674](https://github.com/d4rken/sdmaid-public/issues/674)
 - And all the rest ^^
+- Simple menu for command line ("LVC-AMS_-_Menu.sh")
 - SH, or CLI "LVC-AMS_-_Merge_system_APKs_updates"
 - GUI App to manage and execute the scripts
 

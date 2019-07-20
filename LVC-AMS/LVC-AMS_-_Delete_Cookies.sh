@@ -20,7 +20,7 @@
 # File           : LVC-AMS_-_Delete_Cookies.sh
 # Author         : Tobias B. Besemer
 # Author URL     : https://github.com/Tobias-B-Besemer
-# Version of file: 2019-07-20.01
+# Version of file: 2019-07-20.02
 # Notes          : Script isn't tested, yet!
 
 echo
@@ -71,6 +71,9 @@ rm -rfv data/data/com.facebook.katana/app_webview/Cookies
 rm -rfv data/data/com.facebook.katana/app_webview/Cookies-journal
 
 cd LVC-AMS
+
+
+# Here we will scan for the files...
 
 
 if false; then

@@ -17,36 +17,25 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-# File           : LVC-AMS_-_Delete_zzz.Fabric.sh
+# File           : LVC-AMS_-_Backup_restore.sh
 # Author         : Tobias B. Besemer
 # Author URL     : https://github.com/Tobias-B-Besemer
-# Version of file: 2019-07-20.02
-# Notes          : 
+# Version of file: 2019-07-20.01
+# Notes          : This script have no function, yet!
 
 echo
-echo "Delete zzz.Fabric..."
+echo "Lets restore the backup..."
 echo
 su
 
-cd ..
 
-rm -rfv data/data/com.adobe.psmobile/files/.Fabric/.
-rm -rfv data/data/com.anddoes.launcher/files/.Fabric/.
-rm -rfv data/data/com.atomicadd.fotos/files/.Fabric/.
-rm -rfv data/data/com.coinbase.android/files/.Fabric/.
-rm -rfv data/data/com.degoo.android/files/.Fabric/.
-rm -rfv data/data/com.degoo.android/files/databases/FabricEvents/.
-rm -rfv data/data/com.discord/files/.Fabric/.
-rm -rfv data/data/com.evozi.network/files/.Fabric/.
+echo "This script have no function, yet!"
 
+if false; then
 
-# Here we scan later for the files!
+# Here will follow some notes and coding snippets...
 
+fi
 
-cd LVC-AMS
-
-if run single
-  LVC-AMS_-_End_clean_options.sh
-endif
 
 # EOF

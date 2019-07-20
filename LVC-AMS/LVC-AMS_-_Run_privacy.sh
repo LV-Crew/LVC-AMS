@@ -20,7 +20,7 @@
 # File           : LVC-AMS_-_Run_privacy.sh
 # Author         : Tobias B. Besemer
 # Author URL     : https://github.com/Tobias-B-Besemer
-# Version of file: 2019-07-20.01
+# Version of file: 2019-07-20.02
 # Notes          : Script isn't tested, yet!
 
 echo
@@ -82,9 +82,12 @@ sleep 3
 echo
 echo "Reboot now?"
 echo
+echo
 echo "Option 1: Reboot now"
 echo "Option 2: Reboot later"
+echo
 echo "Exit Script"
+echo
 echo
 PS3='Please enter your choice: '
 Options=("Option 1" "Option 2" "Exit Script")
