@@ -11,6 +11,7 @@ LV-Crew (LVC) Android Maintenance Scripts (AMS)
 <br>
 
 ## Project News
+**2019-08-29: A lot of changes but just a middle step to get the GitHub Desktop client free for other projects**  
 **2019-07-20: Files styling and make the source code executable for first debugging**  
 **2019-07-18: Status: We collect information!**  
 **2019-07-18: Initial Commit**  

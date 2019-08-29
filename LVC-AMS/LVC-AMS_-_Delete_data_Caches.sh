@@ -20,7 +20,7 @@
 # File           : LVC-AMS_-_Delete_Caches.sh
 # Author         : Tobias B. Besemer
 # Author URL     : https://github.com/Tobias-B-Besemer
-# Version of file: 2019-07-20.02
+# Version of file: 2019-07-21.01
 # Notes          : Script isn't tested, yet!
 #                  Code have some TO-DOS!
 
@@ -101,6 +101,11 @@ rm -rfv data/data/com.facebook.katana/app_browser_proc_webview/IndexedDB/.
 rm -rfv data/data/com.facebook.katana/app_webview/IndexedDB/.
 
 rm -rfv Android/data/com.amazon.kindle/files/cache/.
+rm -rfv Android/data/com.facebook.appmanager/cache/.
+rm -rfv Android/data/com.facebook.katana/cache/.
+rm -rfv Android/data/com.facebook.orca/cache/.
+rm -rfv Android/data/com.fstop.photo/files/cache/.
+rm -rfv Android/data/com.ghisler.android.TotalCommander/cache/.
 rm -rfv Android/data/com.sand.airdroid/files/cache/.
 rm -rfv InstaSave/is_cache/.
 

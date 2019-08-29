@@ -17,39 +17,49 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-# File           : LVC-AMS_-_Delete_Thumbnails.sh
+# File           : LVC-AMS_-_Delete_App2SD_folders.sh
 # Author         : Tobias B. Besemer
 # Author URL     : https://github.com/Tobias-B-Besemer
-# Version of file: 2019-07-19.01
+# Version of file: 2019-07-21.01
+# Notes          : This script have no function, yet!
 
 echo
-echo "Delete Thumbnails..."
+echo "Lets delete the App2SD folders..."
 echo
 su
 
-cd ..
 
-#rm -rfv DCIM/.thumbnails/.
+echo "This script have no function, yet!"
 
-rm -rfv data/data/com.adobe.scan.android/files/scanned/thumbs/.
-rm -rfv data/data/com.android.chrome/cache/thumbnails/.
-rm -rfv data/data/com.dropbox.android/cache/u*/thumbs/.
-rm -rfv data/data/com.dropbox.android/global/external/miscthumbs/.
-rm -rfv data/data/com.dropbox.android/global/sharedlinks/thumbs/.
-rm -rfv data/data/com.dropbox.android/u*/thumbs/.
+if false; then
 
-#rm -rfv data/data/com.facebook.katana/app_compactdisk/graph_service_cache/*/*/storage/.
-# Need more analysis !!!
+# Here will follow some notes and coding snippets...
 
-# https://androidforums.com/threads/cached-album-artwork.459234/
-rm -rfv Android/data/cooliris.media/.
-rm -rfv Android/data/com.android.providers.media/albumthumbs/.
-rm -rfv WhatsApp/.Thumbs/.
+# https://forums.androidcentral.com/general-help-how/85809-tutorial-everything-you-wanted-know-about-app2sd-ext3-ext4-partitions.html
 
-cd LVC-AMS
+set option to overjump "goto end"
 
-if run single
-	LVC-AMS_-_End_clean_options.sh
-endif
+echo "Here follows info... Delete Dalvik, OBB & APKs on extSD and in Backup..."
+
+if not option
+  goto end
+else
+# real commands
+
+delete /Dalvik
+
+# https://www.droidwiki.org/wiki/APK_Expansion_Files
+# Delete OBB files from extSD after new install
+delete obb
+delete Android/obb
+
+delete APKs
+
+delete more data
+
+:end
+
+fi
+
 
 # EOF
